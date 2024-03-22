@@ -4,6 +4,9 @@ body{
     margin: 0;
     padding: 0;
 }
+
+/*We will use index.css file in other .html files too. Because of this we do not style img tag directly. Instead
+        we use its parent to access it.*/
 #logo>img{
     height: 70px;
     width: auto;
@@ -16,6 +19,27 @@ body{
     height: 100%;
     z-index: -1;
 }
+
+.image-container {
+    display: flex;
+    justify-content: center; /*We write this to put the image to the center */
+}
+
+.image-container img {
+    width: 50%;
+    height: auto; /*We set this as auto to keep the ratio*/
+}
+
+/*Like img tags, we style p tag by its parent instead of directly styling them*/
+.container>p{
+    color: white;
+    font-family: 'Times New Roman', Times, serif;
+    font-size:large;
+    text-align: center;
+    background-color: rgba(8, 8, 8, 0.50); /* We gave a background color to the text because the background image is too confusing*/
+    padding: 10px; 
+}
+
 header{
     display: flex;
     justify-content: flex-end;
@@ -61,6 +85,7 @@ li>a{
     text-align: center;
 }
 
+/*From this line, we style the footer*/
 footer{
     display: flex;
     justify-content: flex-end;
@@ -72,6 +97,14 @@ footer{
     flex-direction: column;
     width: 30%;
 }
+h6{
+    width: 75%;
+    margin: 10px 0;
+    font-size: 20px;
+    text-align: end;
+    color: white;
+}
+
 h5{
     width: 75%;
     margin: 10px 0;
@@ -79,6 +112,7 @@ h5{
     text-align: end;
     color: gray;
 }
+
 .links{
     display: flex;
     align-items: center;
